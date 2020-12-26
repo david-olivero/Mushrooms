@@ -76,6 +76,7 @@ The chart blow compares the accuracy achieved with a dummy stratification model 
 
 ![compare](/images/model_compare.png)
 
+It is interested that it takes a highly complex, pre-trained ResNet model to perform wel with this dataset. With a much larger quantity of high quality images, we should expect the CNN model to perform much closer to ResNet50 in accuracy (as it does with fewer categories of mushrooms).
 To be sure, in many computer vision exercises, a significantly higher accuracy can be obtained, often well in excess of 90%. The mushroom image set presents some fairly unique challenges, as has been discussed above. Indeed, it’s fair to say that 88% accuracy might be as good as what any true human expert could be expected to achieve based on images of mushrooms alone (i.e., they don’t get to touch, smell, cut, or inspect the surroundings of a mushroom, which are clues a mycologist often uses in the identification process.) 
 A **confusion matrix heatmap** for the hold-out test set is shown below. Rather than randomly distributed error, the confusion matrix shows particular identification issues; for example, thinking too many images are Hygrocybes, and having a hard time finding all the Cortinarius and Entoloma mushrooms.
 
@@ -90,7 +91,7 @@ A breakdown of each mushroom genus looks like this. On an individual genus basis
 a)	With more time, it may be possible to break through the 90% accuracy level. While the exact method that will accomplish this is not known, I suspect that preventing overfitting of ResNet50 on training data may prove fruitful.  
 b)	Experimenting with further image manipulations, such as superimposing a sobel edge detect image onto a standard RGB image. This might possibly allow the model to better identify the mushrooms in an image. 
 c)	As a follow on to note (b) above, it may be possible to count the number of mushrooms in an image using edge detect algorithms like sobel or canny. If possible, that might be a useful feature to add to the dataset. 
-d)	And, as always, procuring more high-quality images data of these mushroom classes! 
+d)	And, as always, procuring more high-quality images data of these mushroom classes! This might enable the far simpler CNN model to perform well. 
 
 ## 9. Credits
 Many thanks to Springboard and Paperspace for access to their Gradient GPU environments which allowed these highly complicated neural network models to train quickly, allowing the great deal of iteration that was required to tune the model performance.  Thanks especially to Branko Kovac for his encouragement and excellent counsel during this project! 
