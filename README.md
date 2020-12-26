@@ -77,6 +77,8 @@ The chart blow compares the accuracy achieved with a dummy stratification model 
 ![compare](/images/model_compare.png)
 
 It is interested that it takes a highly complex, pre-trained ResNet model to perform wel with this dataset. With a much larger quantity of high quality images, we should expect the CNN model to perform much closer to ResNet50 in accuracy (as it does with fewer categories of mushrooms).
+
+
 To be sure, in many computer vision exercises, a significantly higher accuracy can be obtained, often well in excess of 90%. The mushroom image set presents some fairly unique challenges, as has been discussed above. Indeed, it’s fair to say that 88% accuracy might be as good as what any true human expert could be expected to achieve based on images of mushrooms alone (i.e., they don’t get to touch, smell, cut, or inspect the surroundings of a mushroom, which are clues a mycologist often uses in the identification process.) 
 A **confusion matrix heatmap** for the hold-out test set is shown below. Rather than randomly distributed error, the confusion matrix shows particular identification issues; for example, thinking too many images are Hygrocybes, and having a hard time finding all the Cortinarius and Entoloma mushrooms.
 
